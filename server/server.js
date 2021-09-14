@@ -7,8 +7,12 @@ const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, '../dist', 'index.html'));
+  });
+
+app.get("/api/home", (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../', 'home_page.json'));
   });
 
 app.listen(PORT, () => {
