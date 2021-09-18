@@ -5,8 +5,8 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import Home from'./Home';
-import Product from './Product';
+import Home from'./Home/Home';
+import Product from './Product/Product';
 class App extends Component{
     render(){
         return(
