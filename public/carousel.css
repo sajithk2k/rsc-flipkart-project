@@ -1,0 +1,66 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.sliderImage {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slider{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100vw;
+}
+
+.swiper{
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.swiper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-img {
+  width: 360px;
+  height: 300px;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.dots{
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot{
+  padding: 3px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.circular-div{
+  display: flex;
+  position: relative;
+}
+
+.wish{
+  right: 16px; 
+  top: 10px; 
+  transform: translateX(0px);
+}

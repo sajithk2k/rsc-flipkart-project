@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react'
+import Carousel from '$carousel/Carousel'
+// import Shell from './shell/Shell.js'
+import Details from '$details/Details'
 
-class Product extends React.Component {
-    render() { 
-        return <div>This will be the Product Page!</div>;
-    }
+export default function Product() {
+    return (
+        <>
+            <Carousel /> 
+            <Details />
+            {/* <Shell /> */}
+        </>
+    )
 }
- 
-export default Product;

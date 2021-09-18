@@ -1,0 +1,69 @@
+.details{
+    padding-top: 8px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.details > div {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.companyName{
+    padding-bottom: 4px;
+    font-size: 14px;
+    color: rgba(33,33,33,1.00);
+}
+
+.productName{
+    font-size: 16px;
+    color: rgb(135, 135, 135);
+}
+
+.priceDetails{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 29px;
+}
+
+.priceDetails > div{
+    display: inline;
+}
+
+.price{
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    font-family: Roboto Medium,Roboto-Medium,Droid Sans,HelveticaNeue-Medium,Helvetica Neue Medium,sans-serif-medium;
+}
+
+.mrp{
+    font-size: 14px;
+    margin-left: 8px;
+    color: rgb(135, 135, 135);
+    text-decoration-line: line-through;
+}
+
+.discount{
+    font-size: 14px;
+    margin-left: 6px;
+    color: rgb(0, 140, 0);
+}
+
+.fixed{
+    height: 16px;
+    display: flex;
+}
+
+.fixed > div{
+    display: inline;
+    height: 16px;
+}
+
+.f-assured-img{
+    width: 61px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.delivery{
+    font-size: 14px;
+}

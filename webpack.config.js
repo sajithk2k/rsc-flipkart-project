@@ -8,6 +8,12 @@ module.exports = {
         filename: 'index_bundle.js',
         publicPath: '/'
     },
+    resolve: {
+        alias: {
+          $carousel: path.resolve(__dirname, 'src/components/Product/carousel/'),
+          $details: path.resolve(__dirname, 'src/components/Product/details/'),
+        },
+    },
     module: {
         rules: [
             {
@@ -24,7 +30,7 @@ module.exports = {
       },
     plugins: [
         new HTMLWebpackPlugin({
-            template:'./src/index.html'
+            template:'./public/index.html'
         })
     ]
 }
