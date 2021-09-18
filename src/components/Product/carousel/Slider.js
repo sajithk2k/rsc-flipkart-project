@@ -63,7 +63,7 @@ export default function Slider(props) {
           <img className='carousel-img' key={index} src={slide.image} alt="" />)}
       </div>
       <Dots slides={props.slides} current={current}/>
-      {props.children}
+      {/* {props.children} */}
     </div>
   );
 };
