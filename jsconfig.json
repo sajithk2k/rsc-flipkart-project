@@ -4,6 +4,7 @@
 		"paths": {
 			"$carousel/*": ["src/components/Product/carousel/*"],
 			"$details/*": ["src/components/Product/details/*"],
+            "$shell/*": ["src/components/Product/shell/*"]
 		}
 	},
 	"include": ["src/**/*.js"]
