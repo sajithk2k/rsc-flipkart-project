@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"baseUrl": "src",
+		"paths": {
+			"$carousel/*": ["src/components/Product/carousel/*"],
+			"$details/*": ["src/components/Product/details/*"],
+		}
+	},
+	"include": ["src/**/*.js"]
+}
