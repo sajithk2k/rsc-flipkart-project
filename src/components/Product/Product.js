@@ -6,8 +6,8 @@ import Details from '$details/Details'
 export default function Product() {
     return (
         <>
-            <Carousel /> 
-            <Details />
+            <Carousel/> 
+            <Details/>
             {/* <Shell /> */}
         </>
     )
