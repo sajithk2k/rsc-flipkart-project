@@ -1,20 +1,18 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+body{
+  margin: 0;
 }
 
-.sliderImage {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
+/* .App {
+  font-family: sans-serif;
+  text-align: center;
+} */
 
 .slider{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 0;
   width: 100vw;
 }
 
