@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "start-server": "node server/server.js",
+    "start-server": "cd server && npm run watch",
     "build": "webpack --mode production"
   },
   "keywords": [],
