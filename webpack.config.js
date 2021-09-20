@@ -13,6 +13,7 @@ module.exports = {
           $carousel: path.resolve(__dirname, 'src/components/Product/carousel/'),
           $details: path.resolve(__dirname, 'src/components/Product/details/'),
           $shell: path.resolve(__dirname, 'src/components/Product/shell/'),
+          $header: path.resolve(__dirname, 'src/components/Product/header/'),
         },
     },
     module: {
