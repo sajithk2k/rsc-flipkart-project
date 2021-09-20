@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from './Slider'
 // import Wishlist from './Wishlist';
+import './Carousel.css'
 
 const ImageData = [
   {
