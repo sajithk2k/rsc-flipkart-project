@@ -5,7 +5,7 @@ class Home extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            slots:[]
+            data:{}
         }
     }
     componentDidMount(){
@@ -13,14 +13,14 @@ class Home extends React.Component {
         fetch('http://localhost:3000/api/home')
         .then(response => response.json())
         .then(function(data){
-          self.setState({slots:data});
+          self.setState({data:data});
         })
         .catch(error => {
           console.error("Error: " + error)
         });
       }
     render() { 
-        console.log(this.state.slots);
+        console.log(this.state.data);
         return(
             <>
             <Search />

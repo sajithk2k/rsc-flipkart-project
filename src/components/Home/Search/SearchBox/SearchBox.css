@@ -10,3 +10,9 @@
    color: rgb(135, 135, 135);
    font-family: Roboto, Helvetica, Arial, sans-serif;
 }
+
+.search-icon{
+    height:14px;
+    width:14px;
+    margin: 0 2%;
+}
