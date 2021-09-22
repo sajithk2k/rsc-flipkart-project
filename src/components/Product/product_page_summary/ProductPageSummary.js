@@ -1,7 +1,8 @@
-import React from 'react'
-import './Details.css'
+import React, { useEffect } from 'react'
+import './ProductPageSummary.css'
 
-export default function Name() {
+export default function ProductPageSummary({slot}) {
+
     return (
         <div className='details'>
             <div id='companyName'>Aayu</div>
