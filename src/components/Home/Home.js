@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HomeCSS from './Home.module.css';
 import Search from './Search/Search';
 import Banner from './Banner/Banner';
+import CreativeCard from './CreativeCard/CreativeCard';
 class Home extends React.Component {
     constructor(props){
         super(props);
@@ -27,6 +28,7 @@ class Home extends React.Component {
             <>
             <Search widgetData={this.state.slots[0]}/>
             <Banner widgetData={this.state.slots[1]}/>
+            <CreativeCard widgetData={this.state.slots[2]}/>
             </>
         ); 
     }

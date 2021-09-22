@@ -1,5 +1,5 @@
-export const parseImageUrl = (aspectRatio,url) => {
-    let w = screen.width;
+export const parseImageUrl = (aspectRatio,url,width) => {
+    let w = width;
     let temp = aspectRatio.split(":");
     let a = Number(temp[0]) , b = Number(temp[1]);
     let h = Math.round(w*b/a);
