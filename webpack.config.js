@@ -10,9 +10,13 @@ module.exports = {
     },
     resolve: {
         alias: {
-          $carousel: path.resolve(__dirname, 'src/components/Product/carousel/'),
-          $details: path.resolve(__dirname, 'src/components/Product/details/'),
+          $multimedia: path.resolve(__dirname, 'src/components/Product/multimedia/'),
+          $product_page_summary: path.resolve(__dirname, 'src/components/Product/product_page_summary/'),
+          $product_details: path.resolve(__dirname, 'src/components/Product/product_details/'),
+          $banner: path.resolve(__dirname, 'src/components/Product/banner/'),
+          $rating: path.resolve(__dirname, 'src/components/Product/rating/'),
           $shell: path.resolve(__dirname, 'src/components/Product/shell/'),
+          $header: path.resolve(__dirname, 'src/components/Product/header/'),
         },
     },
     module: {

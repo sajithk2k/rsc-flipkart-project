@@ -15,7 +15,8 @@
     "@babel/preset-react": "^7.14.5",
     "react": "^0.0.0-experimental-7ec4c5597",
     "react-dom": "^0.0.0-experimental-7ec4c5597",
-    "react-router-dom": "^5.3.0"
+    "react-router-dom": "^5.3.0",
+    "react-fetch": "0.0.0-experimental-7ec4c5597"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

@@ -1,0 +1,25 @@
+.slider {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+/* width: 100%; */
+}
+
+.slider__swiper {
+display: flex;
+overflow-x: scroll;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider__swiper::-webkit-scrollbar {
+display: none;
+}
+
+.slider__carousel-img {
+object-fit: cover;
+padding: 5px;
+}
