@@ -1,67 +1,86 @@
 .details{
-    padding: 8px 16px 24px 16px;
+    padding: 8px;
 }
 
 .details div{
     font-family: Roboto, sans-serif;
 }
 
-#companyName{
+.details__companyName{
     padding-bottom: 4px;
     font-size: 14px;
     color: rgba(33,33,33,1.00);
 }
 
-#productName{
+.details__productName{
     font-size: 16px;
     color: rgb(135, 135, 135);
 }
 
-#priceDetails{
-    padding: 8px 0px;
-    height: 29px;
+.details__priceDetails{
+    padding: 8px 0px 3px 0px;
+    height: 40px;
 }
 
-#priceDetails > div{
+.details__priceDetails > div{
     display: inline;
+    font-weight: bold;
 }
 
-#price{
+.details__price{
     font-size: 22px;
     color: rgb(0, 0, 0);
 }
 
-#price ~ div{
+.details__price ~ div{
     font-size: 14px;
 } 
 
-#mrp{
+.details__mrp{
     margin-left: 8px;
     color: rgb(135, 135, 135);
     text-decoration-line: line-through;
 }
 
-#discount{
+.details__discount{
     margin-left: 6px;
     color: rgb(0, 140, 0);
 }
 
-#fixed{
-    height: 18px;
-    display: flex;
+.details__delivery{
+    font-size: 14px;
+    line-height: 16px;
 }
 
-#fixed > div{
+.details__rate-ratings{
+    margin: 5px 0px;
+}
+
+.details__rate-ratings div{
     display: inline;
 }
 
-#f-assured-img{
-    width: 61px;
-    height: 16px;
-    margin-right: 8px;
+.details__rate{
+    background-color:rgba(0,140,0,1.00);
+    border-radius: 10px;
+    padding-left: 2px;
 }
 
-#delivery{
+.details__value{
+    color: white;
     font-size: 14px;
-    line-height: 16px;
+    padding: 5px;
+}
+
+.details__ratings{
+    font-size: 14px;
+    color: #878787;
+    padding: 0 8px;
+    font-weight: bold;
+}
+
+.details__f-assured-img{
+    width: 61px;
+    height: 16px;
+    vertical-align: middle;
 }

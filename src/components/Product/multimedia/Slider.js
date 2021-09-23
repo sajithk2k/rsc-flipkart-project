@@ -63,8 +63,8 @@ export default function Slider(props) {
             key={index} 
             src={slide} 
             alt="" 
-            // width={props.width} 
-            // height={props.height} 
+            width={props.width} 
+            height={props.height} 
             />
           )}
         </div>

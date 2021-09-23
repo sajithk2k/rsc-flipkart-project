@@ -1,8 +1,5 @@
 .slider {
 position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
 margin: 0;
 /* width: 100%; */
 }
@@ -20,6 +17,7 @@ display: none;
 }
 
 .slider__carousel-img {
+flex-shrink: 0;
 object-fit: cover;
 padding: 5px;
 }
