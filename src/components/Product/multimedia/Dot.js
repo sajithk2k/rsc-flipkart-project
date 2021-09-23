@@ -6,7 +6,7 @@ export default function Dot({ active }) {
     return (
         <span className='dot'
             style={{
-                background: `${active ? 'black' : 'white'}`
+                background: `${active ? 'black' : '#C2C2C2'}`
             }}
         />
     )

@@ -1,0 +1,12 @@
+.product{
+    padding: 16px;
+}
+
+.product div{
+    font-family: Roboto, sans-serif;
+}
+
+.break-widget{
+    height: 8px;
+    background-color: #ECEDEF;
+}

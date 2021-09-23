@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import './Product.css'
 import Multimedia from '$multimedia/Multimedia'
 import ProductPageSummary from '$product_page_summary/ProductPageSummary'
-// import ProductDetails from '$product_details/ProductDetails'
+import ProductDetails from '$product_details/ProductDetails'
 // import Banner from '$banner/Banner'
 // import Rating from '$rating/Rating'
 // import Shell from '$shell/Shell.js'
@@ -16,10 +17,10 @@ const widgets = [
         type:'PRODUCT_PAGE_SUMMARY', 
         component:ProductPageSummary
     },
-    // {
-    //     type:'PRODUCT_DETAILS', 
-    //     component:ProductDetails
-    // },
+    {
+        type:'PRODUCT_DETAILS', 
+        component:ProductDetails
+    },
     // {
     //     type:'BANNER', 
     //     component:Banner

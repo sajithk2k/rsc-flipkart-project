@@ -1,0 +1,27 @@
+.details__title{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.details__specs{
+    padding-bottom: 8px;
+}
+
+.details__specs div{
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.details__specs > div{
+    padding-bottom: 16px;
+}
+
+.details__name{
+    color: rgb(135, 135, 135);    
+}
+
+/* .details__values{
+    display: inline;
+} */
