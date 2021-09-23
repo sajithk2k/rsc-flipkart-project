@@ -32,15 +32,16 @@ const widgets = [
 
 export default function Product() {
     const [slots, setSlots] = useState([])
+    const [priceDetails, setPriceDetails] = useState({})
 
     useEffect(()=>
     {
       fetch('http://localhost:3000/api/product')
       .then(data=>data.json())
-      .then(data=>data['RESPONSE']['slots'])
       .then(data=>{
-        console.log(data)
-        setSlots(data)
+        // console.log(data)
+        setPriceDetails(data['RESPONSE']['pageData']['pageContext'])
+        setSlots(data['RESPONSE']['slots'])
       })
     }
   , [])
@@ -48,7 +49,7 @@ export default function Product() {
     return (
         <>   
             {widgets.map(widget=>
-                React.createElement(widget.component, {slot:slots.find(slot=>slot.widget.type===widget.type)})
+                React.createElement(widget.component, {slot:slots.find(slot=>slot.widget.type===widget.type), priceDetails})
             )}
             {/* <Shell /> */}
             {/* <Header/> */}

@@ -46,7 +46,6 @@ export default function Multimedia({slot}) {
   return (
     <>
       <Slider slides={imageData} height={height} width={width}/>
-      {/* <div>Hello</div> */}
     </>
   )
 }
