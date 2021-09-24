@@ -27,23 +27,25 @@ export default function ProductPageSummary({slot, priceDetails}) {
     }}, [slot])
 
     return (
-        <div className='details'>
-            <div className='details__companyName'>{data.companyName}</div>
-            <div className='details__productName'>{data.productName}</div>
-            <div className='details__priceDetails'>
-                <div className='details__price'>₹{data.price}</div>
-                <div className='details__mrp'>{data.mrp}</div>
-                <div className='details__discount'>{data.discount}% off</div>
+        <>
+        <div className='summary'>
+            <div className='summary__companyName'>{data.companyName}</div>
+            <div className='summary__productName'>{data.productName}</div>
+            <div className='summary__priceDetails'>
+                <div className='summary__price'>₹{data.price}</div>
+                <div className='summary__mrp'>{data.mrp}</div>
+                <div className='summary__discount'>{data.discount}% off</div>
             </div>
-            <div className='details__rate-ratings'>
-                <div className="details__rate" >
-                    <div className='details__value'>{data.rate} ★</div>
+            <div className='summary__rate-ratings'>
+                <div className="summary__rate" >
+                    <div className='summary__value'>{data.rate} ★</div>
                 </div>
-                <div className='details__ratings'>{data.ratings} ratings</div>
-                <div className='details__fa'>
-                    {data.favailable && <img className='details__f-assured-img' src="https://rukminim1.flixcart.com/www/200/50/promos/21/07/2017/e8625e14-3277-4f16-a4d4-df8ed525905b.png?q=90" loading="lazy"/>}
+                <div className='summary__ratings'>{data.ratings} ratings</div>
+                <div className='summary__fa'>
+                    {data.favailable && <img className='summary__f-assured-img' src="https://rukminim1.flixcart.com/www/200/50/promos/21/07/2017/e8625e14-3277-4f16-a4d4-df8ed525905b.png?q=90" loading="lazy"/>}
                 </div>
             </div>
         </div>
+        </>
     )
 }

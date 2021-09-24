@@ -68,8 +68,8 @@ export default function Slider(props) {
             />
           )}
         </div>
-        <Dots slides={props.slides} current={current} />
       </div>
+      <Dots slides={props.slides} current={current} />
     </div>
   );
 };
