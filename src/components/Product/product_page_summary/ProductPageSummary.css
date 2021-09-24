@@ -10,7 +10,7 @@
 }
 
 .summary__priceDetails{
-    padding: 8px 0px 3px 0px;
+    padding: 8px 0px;
     height: 40px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .summary__rate-ratings{
-    margin: 5px 0px;
+    margin: 5px 0px 8px 0px;
 }
 
 .summary__rate-ratings div{
