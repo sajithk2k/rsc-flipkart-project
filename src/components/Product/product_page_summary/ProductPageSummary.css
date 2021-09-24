@@ -1,3 +1,7 @@
+.summary{
+    padding: 16px;
+}
+
 .summary__companyName{
     padding-bottom: 6px;
     font-size: 14px;
@@ -17,6 +21,7 @@
 .summary__priceDetails > div{
     display: inline;
     font-weight: bold;
+    vertical-align: middle;
 }
 
 .summary__price{
@@ -54,14 +59,14 @@
 
 .summary__rate{
     background-color:rgba(0,140,0,1.00);
-    border-radius: 10px;
-    padding-left: 2px;
+    border-radius: 20px;
+    padding: 0px 2px 2px 2px;
 }
 
 .summary__value{
     color: white;
-    font-size: 14px;
-    padding: 5px;
+    font-size: 12px;
+    padding: 1px 3px 3px 3px;
 }
 
 .summary__ratings{

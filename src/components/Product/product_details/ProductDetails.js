@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import BreakWidget from "../BreakWidget";
 import './ProductDetails.css'
 
 export default function ProductDetails({ slot }) {
@@ -14,11 +13,11 @@ export default function ProductDetails({ slot }) {
     useEffect(() => console.log({data}), [data])
     return (
         <>
-        <div className='product details'>
-            <div className='details__title'>Product Details</div>
+        <div className='title'>Product Details</div>
+        <div className='details'>
             <div className='details__specs'>
                 {data.map(d => 
-                    <div>
+                    <div key={d.name}>
                         <div className='details__name'>{d.name}</div>
                         <div className='details__values'>{d.values}</div>
                     </div>
@@ -34,7 +33,6 @@ export default function ProductDetails({ slot }) {
                 <img className='all-details__arrow' src="https://rukminim1.flixcart.com/www/40/40/promos/14/06/2019/2b122c28-4cef-490b-a251-41e0176c977a.png?q=90" loading="lazy" alt="" />
             </div>
         </div>
-        <BreakWidget/>
         </>
     )
 }

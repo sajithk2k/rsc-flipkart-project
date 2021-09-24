@@ -3,8 +3,9 @@ import './Product.css'
 import Multimedia from '$multimedia/Multimedia'
 import ProductPageSummary from '$product_page_summary/ProductPageSummary'
 import ProductDetails from '$product_details/ProductDetails'
-// import Banner from '$banner/Banner'
-// import Rating from '$rating/Rating'
+import Banner from '$banner/Banner'
+import BreakWidget from './BreakWidget'
+import Rating from '$rating/Rating'
 // import Shell from '$shell/Shell.js'
 // import Header from '$header/Header'
 
@@ -21,14 +22,14 @@ const widgets = [
         type:'PRODUCT_DETAILS', 
         component:ProductDetails
     },
-    // {
-    //     type:'BANNER', 
-    //     component:Banner
-    // },
-    // {
-    //     type:'RATING',
-    //     component:Rating
-    // }
+    {
+        type:'BANNER', 
+        component:Banner
+    },
+    {
+        type:'RATING',
+        component:Rating
+    }
 ]
 
 export default function Product() {
@@ -49,8 +50,11 @@ export default function Product() {
 
     return (
         <>   
-            {widgets.map(widget=>
-                React.createElement(widget.component, {slot:slots.find(slot=>slot.widget.type===widget.type), priceDetails})
+            {widgets.map((widget, i)=>
+            <React.Fragment key={i}>
+                {React.createElement(widget.component, {slot:slots.find(slot=>slot.widget.type===widget.type), priceDetails})}
+                {i!==0 && <BreakWidget/>}
+            </React.Fragment>
             )}
             {/* <Shell /> */}
             {/* <Header/> */}

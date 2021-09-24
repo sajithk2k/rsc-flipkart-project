@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import BreakWidget from '../BreakWidget'
 import './ProductPageSummary.css'
 
 export default function ProductPageSummary({slot, priceDetails}) {
@@ -29,7 +28,7 @@ export default function ProductPageSummary({slot, priceDetails}) {
 
     return (
         <>
-        <div className='product summary'>
+        <div className='summary'>
             <div className='summary__companyName'>{data.companyName}</div>
             <div className='summary__productName'>{data.productName}</div>
             <div className='summary__priceDetails'>
@@ -47,7 +46,6 @@ export default function ProductPageSummary({slot, priceDetails}) {
                 </div>
             </div>
         </div>
-        <BreakWidget/>
         </>
     )
 }
