@@ -1,0 +1,62 @@
+.product-div{
+    padding: 8px 16px;
+    border-bottom: 0.6px solid rgb(234, 234, 234);
+    display: flex;
+    height:80px;
+}
+.product-details-div{
+    display:flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+.product-img{
+    width:80px;
+}
+.product-wrapper{
+    border-bottom: 0.6px solid rgb(234, 234, 234);
+}
+.product-title{
+    font: 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color:rgb(33, 33, 33);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.product-subtitle{
+    font:12px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color:rgb(135, 135, 135);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 16px;
+}
+.pricing-div{
+    display:flex;
+    align-items: center;
+}
+.price{
+    font:16pc;
+    font-family:"Roboto Medium", Roboto-Medium, "Droid Sans", HelveticaNeue-Medium, "Helvetica Neue Medium", sans-serif-medium;
+    padding-right:8px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+}
+.strike-price{
+    text-decoration-line: line-through;
+    font-size:12px;
+    color:rgb(144,144,144);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+}
+.discount{
+    margin-left:4px;
+    color:rgb(56, 142, 60);
+    line-height: 16px;
+    font-size:12px;
+    font-family: "Roboto Medium", Roboto-Medium, "Droid Sans", HelveticaNeue-Medium, "Helvetica Neue Medium", sans-serif-medium;
+    display: flex;
+    align-items: center;
+}

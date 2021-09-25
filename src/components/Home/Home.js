@@ -5,6 +5,7 @@ import Banner from './Banner/Banner';
 import CreativeCard from './CreativeCard/CreativeCard';
 import Omu from './Omu/Omu';
 import Pmu from './Pmu/Pmu'
+import Recent from './Recent/Recent';
 class Home extends React.Component {
     constructor(props){
         super(props);
@@ -33,6 +34,7 @@ class Home extends React.Component {
             <CreativeCard widgetData={this.state.slots[2]}/>
             <Omu widgetData={this.state.slots[3]}/>
             <Pmu widgetData={this.state.slots[4]}/>
+            <Recent widgetData={this.state.slots[5]}/>
             </>
         ); 
     }
