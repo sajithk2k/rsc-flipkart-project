@@ -7,6 +7,8 @@
 			"$product_details/*": ["src/components/Product/product_details/*"],
 			"$banner/*": ["src/components/Product/banner/*"],
 			"$rating/*": ["src/components/Product/rating/*"],
+            "$shell/*": ["src/components/shell/*"],
+			"$header/*": ["src/components/header/*"],
 		}
 	},
 	"include": ["src/**/*.js"]
