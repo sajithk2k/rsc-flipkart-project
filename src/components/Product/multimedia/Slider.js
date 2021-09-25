@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useRef, useState } from "react";
 import './Slider.css'
 import Dots from './Dots'
-import BackHeader from '$shell/BackHeader';
+import BackHeader from '../../shell/BackHeader';
 
 export default function Slider(props) {
   const isScrollRef = useRef()
