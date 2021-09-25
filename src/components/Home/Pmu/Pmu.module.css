@@ -1,0 +1,19 @@
+.pmu-div{
+    width:100vw;
+    flex-basis: auto;
+    border:0px solid black;
+}
+.pmu-content-div{
+    display: flex;
+    width:100%;
+}
+.single-product-div{
+    width:65%;
+    padding:8px;
+}
+.double-product-div{
+    width:35%;
+}
+.product-sm{
+    height:50%;
+}
