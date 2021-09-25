@@ -11,7 +11,7 @@ const Banner = (props) => {
         // (props.widgetData && <p>{props.widgetData.slotType}</p>)
         // <div>{props.widgetData["slotType"]}</div>
         <div className = {BannerCSS["banner-div"]}>
-            <img alt = "Banner Image" className = {BannerCSS["banner-img"]} src ={parseImageUrl(props.widgetData.widget.data.renderableComponents[0].value.aspectRatio,props.widgetData.widget.data.renderableComponents[0].value.dynamicImageUrl,screen.width)}></img>
+            <img alt = "Banner Image" className = {BannerCSS["banner-img"]} src ={parseImageUrl(props.widgetData.widget.data.renderableComponents[0].value.aspectRatio,props.widgetData.widget.data.renderableComponents[0].value.dynamicImageUrl,screen.width)[0]}></img>
         </div>
     );
 }

@@ -6,7 +6,7 @@ const Suggestion = (props) => {
     if(!props.rc)return(null);
     return(
         <div className={SuggestionCSS['suggestion-div']}>
-            <img className={SuggestionCSS['suggestion-img']} src={parseImageUrl("1:1",props.rc.value.images[0].imageUrl,props.width)}></img>
+            <img className={SuggestionCSS['suggestion-img']} src={parseImageUrl("1:1",props.rc.value.images[0].imageUrl,props.width)[0]}></img>
             <div className={SuggestionCSS['title-div']}>{props.rc.value.titles.title}</div>
             <div className={SuggestionCSS['pricing-div']}>
                 <div className={SuggestionCSS["price"]}>{props.rc.value.pricing.displayPrice}</div>
