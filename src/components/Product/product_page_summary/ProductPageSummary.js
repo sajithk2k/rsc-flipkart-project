@@ -13,7 +13,7 @@ export default function ProductPageSummary({slot, priceDetails}) {
     const getFAvailable=()=>priceDetails.faAvailable
 
     useEffect(()=>{
-        if(slot){
+        if(slot)
             setData({
             'productName':getProductName(),
             'companyName':getCompanyName(),
@@ -24,7 +24,7 @@ export default function ProductPageSummary({slot, priceDetails}) {
             'ratings':getRatings(),
             'favailable':getFAvailable(),
         })
-    }}, [slot])
+    }, [slot])
 
     return (
         <>

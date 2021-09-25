@@ -3,14 +3,19 @@ import './Rating.css'
 
 export default function Rating({slot}){
     const [data, setData] = useState({})
+    
+    const getBtnValue=()=>slot.widget.data.reviewButton.value.title
+    const getRate=()=>slot.widget.data.rating.value.average.toFixed(1)
+    const getRatings=()=>slot.widget.data.rating.value.ratingCount
+    const getReviews=()=>slot.widget.data.rating.value.reviewCount
 
     useEffect(()=>{
         if(slot){
             setData({
-                'btnValue':slot.widget.data.reviewButton.value.title,
-                'rate':slot.widget.data.rating.value.average.toFixed(1),
-                'ratings':slot.widget.data.rating.value.ratingCount,
-                'reviews':slot.widget.data.rating.value.reviewCount
+                'btnValue': getBtnValue(),
+                'rate': getRate(),
+                'ratings': getRatings(),
+                'reviews': getReviews()
             })
         }
     }, [slot])

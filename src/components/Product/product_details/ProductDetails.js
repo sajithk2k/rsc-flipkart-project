@@ -2,29 +2,36 @@ import React, { useEffect, useState } from "react";
 import './ProductDetails.css'
 
 export default function ProductDetails({ slot }) {
-    const [data, setData] = useState([])
-    const [detailTitle, setDetailTitle] = useState('')
+    const [data, setData] = useState({specs:[]})
+
+    const getSpecs=()=>slot.widget.data.renderableComponent.value.specification
+    const getDetailsTitle=()=>slot.widget.data.renderableComponent.value.details
+
     useEffect(() => {
         if (slot){
-            setData(slot.widget.data.renderableComponent.value.specification)
-            setDetailTitle(slot.widget.data.renderableComponent.value.details)
+            console.log(getSpecs())
+            setData({
+                specs: getSpecs(),
+                detailsTitle: getDetailsTitle()
+            })
         }
     }, [slot])
     useEffect(() => console.log({data}), [data])
     return (
+        // Product Details and All details from json??
         <>
         <div className='title'>Product Details</div>
         <div className='details'>
             <div className='details__specs'>
-                {data.map(d => 
+                {data.specs.map(d => 
                     <div key={d.name}>
                         <div className='details__name'>{d.name}</div>
                         <div className='details__values'>{d.values}</div>
                     </div>
                 )}
             </div>
-            <div className='details__title'>Details</div>
-            <div className='details__detail-title'>{detailTitle}</div>
+            <div className='details__title'>Details</div>  
+            <div className='details__detail-title'>{data.detailsTitle}</div>
         </div>
         <div className='break-div'/>
         <div className='all-details'>

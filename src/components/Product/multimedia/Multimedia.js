@@ -1,31 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import Slider from './Slider'
+import { parseImageUrl } from '../../../Utils'
 
-export default function Multimedia({slot}) {
-  const [imageData, setImageData] = useState([])
+export default function Multimedia({ slot }) {
+  const [imageData, setImageData] = useState({url:[]})
   const width = screen.width
-  const height = Math.floor((width*6)/5)
-  const quality = '90'
 
-  useEffect(()=>{
-    if(slot){
-      const data = slot.widget.data.multimediaComponents
-      console.log(data)
-      data.map(d=>{
-        let url = d.value.url
-        url = url.replace('{@width}', `${width}`)
-        url = url.replace('{@height}', `${height}`)
-        url = url.replace('{@quality}', `${quality}`)
-        console.log(url)
+  const getData = () => slot.widget.data.multimediaComponents
+  const getAspectRatio = (data) => data.value.aspectRatio
+  const getUrl = (data) => data.value.url
 
-        setImageData(prev=>[url, ...prev])
+  useEffect(() => {
+    if (slot) {
+      getData().map((data, i) => {
+        const [newUrl, height] = parseImageUrl(getAspectRatio(data), getUrl(data), width)
+        setImageData(prev => ({ url: i === 0 ? [newUrl] : [newUrl, ...prev.url], height }))
       })
     }
-  },[slot])
+  }, [slot])
 
   return (
     <>
-      <Slider slides={imageData} height={height} width={width}/>
+      <Slider slides={imageData.url} 
+      height={imageData.height} 
+      width={width}
+      />
     </>
   )
 }

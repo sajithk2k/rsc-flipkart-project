@@ -3,10 +3,11 @@ import './Banner.css'
 
 export default function Banner({slot}){
     const [data, setData] = useState('')
+    const getUrl=()=>slot.widget.data.renderableComponents[0].value.dynamicImageUrl
 
     useEffect(()=>{
         if(slot)
-            setData(slot.widget.data.renderableComponents[0].value.dynamicImageUrl)
+            setData(getUrl())
     }, [slot])
 
     let newUrl = data.replace('{@width}', screen.width)
