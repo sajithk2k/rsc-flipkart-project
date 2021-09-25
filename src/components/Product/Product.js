@@ -6,8 +6,8 @@ import ProductDetails from '$product_details/ProductDetails'
 import Banner from '$banner/Banner'
 import BreakWidget from './BreakWidget'
 import Rating from '$rating/Rating'
-// import Shell from '$shell/Shell.js'
-// import Header from '$header/Header'
+// import Shell from '../shell/Shell.js'
+// import Header from '../header/Header'
 
 const widgets = [
     {
