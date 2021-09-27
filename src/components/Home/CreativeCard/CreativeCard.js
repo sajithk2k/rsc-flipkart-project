@@ -4,11 +4,13 @@ import CreativeCardCSS from './CreativeCard.module.css'
 const CreativeCard= (props) => {
     console.log(props.widgetData);
     if(!props.widgetData)return(null);
+    const widgetImages = props.widgetData.widget.data.renderableComponents;
+    const imgWidth = Math.round(screen.width/3);
     return(
         <div className={CreativeCardCSS["creative-card-div"]}>
-            <WidgetImage rc={props.widgetData.widget.data.renderableComponents[0]} width = {Math.round(screen.width/3)}/>
-            <WidgetImage rc={props.widgetData.widget.data.renderableComponents[1]} width = {Math.round(screen.width/3)}/>
-            <WidgetImage rc={props.widgetData.widget.data.renderableComponents[2]} width = {Math.round(screen.width/3)}/>
+            <WidgetImage rc={widgetImages[0]} width = {imgWidth}/>
+            <WidgetImage rc={widgetImages[1]} width = {imgWidth}/>
+            <WidgetImage rc={widgetImages[2]} width = {imgWidth}/>
         </div>);
 }
 export default CreativeCard;

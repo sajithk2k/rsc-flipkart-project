@@ -5,6 +5,7 @@ import RecentProduct from "./RecentProduct/RecentProduct";
 const Recent = (props) => {
     console.log(props.widgetData)
     if(!props.widgetData)return(null);
+    const recentProducts = props.widgetData.widget.data.renderableComponents;
     return(
         <div>
             <div className={RecentCSS['header-div']}>
@@ -12,9 +13,9 @@ const Recent = (props) => {
                 <div className={RecentCSS['header-btn']}>View all</div>
             </div>
             <div className={RecentCSS['content-div']}>
-                <RecentProduct rc={props.widgetData.widget.data.renderableComponents[0]}/>
-                <RecentProduct rc={props.widgetData.widget.data.renderableComponents[1]}/>
-                <RecentProduct rc={props.widgetData.widget.data.renderableComponents[2]}/>
+                <RecentProduct rc={recentProducts[0]}/>
+                <RecentProduct rc={recentProducts[1]}/>
+                <RecentProduct rc={recentProducts[2]}/>
             </div>
         </div>
     );
