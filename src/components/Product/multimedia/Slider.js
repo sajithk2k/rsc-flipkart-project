@@ -14,6 +14,13 @@ export default function Slider(props) {
     const width = getSwiper().scrollWidth
     return width / props.slides.length
   }
+
+  function scrollToCurrent() {
+    getSwiper().scrollTo({
+      left: current * getDelta(),
+      behavior: "smooth",
+    });
+  }
   
   function handleScroll(e) {
     clearTimeout(isScrollRef.current);
@@ -59,11 +66,4 @@ export default function Slider(props) {
       <Dots slides={props.slides} current={current} />
     </div>
   );
-
-  function scrollToCurrent() {
-    getSwiper().scrollTo({
-      left: current * getDelta(),
-      behavior: "smooth",
-    });
-  }
 };
