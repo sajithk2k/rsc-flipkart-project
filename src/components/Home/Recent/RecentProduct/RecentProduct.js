@@ -7,7 +7,7 @@ const RecentProduct = (props) => {
     return(
         <div className={RecentProductCSS['product-wrapper']}>
             <div className={RecentProductCSS['product-div']}>
-                <img alt="Recent Product Image" className={RecentProductCSS['product-img']} src={parseImageUrl("1:1",props.rc.value.images[0].imageUrl,80)}></img>
+                <img alt="Recent Product Image" className={RecentProductCSS['product-img']} src={parseImageUrl("1:1",props.rc.value.images[0].imageUrl,80)[0]}></img>
                 <div className={RecentProductCSS['product-details-div']}>
                     <div className={RecentProductCSS['product-title']}>{props.rc.action.tracking.title_primary}</div>
                     <div className={RecentProductCSS['product-subtitle']}>{props.rc.action.tracking.title_secondary}</div>

@@ -9,28 +9,13 @@ import Rating from '$rating/Rating'
 // import Shell from '../shell/Shell.js'
 // import Header from '../header/Header'
 
-const widgets = [
-    {
-        type:'MULTIMEDIA',
-        component:Multimedia
-    }, 
-    {
-        type:'PRODUCT_PAGE_SUMMARY', 
-        component:ProductPageSummary
-    },
-    {
-        type:'PRODUCT_DETAILS', 
-        component:ProductDetails
-    },
-    {
-        type:'BANNER', 
-        component:Banner
-    },
-    {
-        type:'RATING',
-        component:Rating
-    }
-]
+const widgets = {
+    'MULTIMEDIA':Multimedia, 
+    'PRODUCT_PAGE_SUMMARY':ProductPageSummary,
+    'PRODUCT_DETAILS':ProductDetails,
+    'BANNER':Banner,
+    'RATING':Rating,
+}
 
 export default function Product() {
     const [slots, setSlots] = useState([])
@@ -47,15 +32,22 @@ export default function Product() {
       })
     }
   , [])
-
+  
+    if(slots.length === 0)return(null)
     return (
         <>   
-            {widgets.map((widget, i)=>
-            <React.Fragment key={i}>
-                {React.createElement(widget.component, {slot:slots.find(slot=>slot.widget.type===widget.type), priceDetails})}
-                {i!==0 && <BreakWidget/>}
-            </React.Fragment>
-            )}
+            {slots.map((slot, i)=>{
+                console.log(slot.widget.type)
+                const WidgetName=widgets[slot.widget.type]
+                console.log(WidgetName)
+                return (
+                    <>
+                        {i!==5 && <WidgetName key={i} slot={slot} priceDetails={priceDetails}/>}
+                        {i!==0 && <BreakWidget/>}
+                    </>
+                )
+            })}
+
             {/* <Shell /> */}
             {/* <Header/> */}
         </>
