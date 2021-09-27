@@ -15,8 +15,8 @@ module.exports = {
           $product_details: path.resolve(__dirname, 'src/components/Product/product_details/'),
           $banner: path.resolve(__dirname, 'src/components/Product/banner/'),
           $rating: path.resolve(__dirname, 'src/components/Product/rating/'),
-          $shell: path.resolve(__dirname, 'src/components/Product/shell/'),
-          $header: path.resolve(__dirname, 'src/components/Product/header/'),
+          $shell: path.resolve(__dirname, 'src/components/shell/'),
+          $header: path.resolve(__dirname, 'src/components/header/'),
         },
     },
     module: {

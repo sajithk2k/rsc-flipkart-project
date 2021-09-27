@@ -9,7 +9,7 @@ const PmuHeader = (props) => {
         <div className={PmuHeaderCSS['header-div']}>
                 <div className={PmuHeaderCSS['header-content']}>
                     <div className={PmuHeaderCSS['header-image-div']}>
-                        <img alt="Header Image" src={parseImageUrl("7:8",props.headerData.referenceImageValue.dynamicImageUrl,56)}></img>
+                        <img alt="Header Image" src={parseImageUrl("7:8",props.headerData.referenceImageValue.dynamicImageUrl,56)[0]}></img>
                     </div>
                     <div className={PmuHeaderCSS['header-text-div']}>
                         <div className={PmuHeaderCSS['title-text']}>{props.headerData.titleValue.text}</div>

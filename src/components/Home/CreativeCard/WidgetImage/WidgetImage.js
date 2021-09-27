@@ -8,7 +8,7 @@ const WidgetImage = (props) => {
     const imgWidth = props.width;
     return(
             <div>
-                <img alt="Widget Image" src={parseImageUrl(imgData.aspectRatio,imgData.dynamicImageUrl,imgWidth)}></img>
+                <img alt="Widget Image" src={parseImageUrl(imgData.aspectRatio,imgData.dynamicImageUrl,imgWidth)[0]}></img>
             </div>
             );
 }

@@ -7,5 +7,5 @@ export const parseImageUrl = (aspectRatio,url,width) => {
     let newUrl = url.replace('{@width}',w);
     newUrl = newUrl.replace('{@height}',h);
     newUrl = newUrl.replace('{@quality}','90');
-    return newUrl;
+    return [newUrl, h];
 }

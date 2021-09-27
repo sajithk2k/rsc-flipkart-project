@@ -12,7 +12,7 @@ const DealCard = (props) => {
     return(
         <div className={DealCardCSS['deal-card-div']}>
             <div className={DealCardCSS['img-div']}>
-                <img className={DealCardCSS['deal-card-img']} src={parseImageUrl(aspectRatio,imgData.dynamicImageUrl,imgWidth)}></img>
+                <img className={DealCardCSS['deal-card-img']} src={parseImageUrl(aspectRatio,imgData.dynamicImageUrl,imgWidth)[0]}></img>
             </div>
             <div className={DealCardCSS['card-name']}>{dealCardDetails.name}</div>
             <div className={DealCardCSS['offer-title']}>{dealCardDetails.offerTitle}</div>

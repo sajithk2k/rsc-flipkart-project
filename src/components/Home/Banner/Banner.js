@@ -8,7 +8,7 @@ const Banner = (props) => {
     const imgData = props.widgetData.widget.data.renderableComponents[0].value;
     return(
         <div className = {BannerCSS["banner-div"]}>
-            <img alt = "Banner Image" className = {BannerCSS["banner-img"]} src ={parseImageUrl(imgData.aspectRatio,imgData.dynamicImageUrl,screen.width)}></img>
+            <img alt = "Banner Image" className = {BannerCSS["banner-img"]} src ={parseImageUrl(imgData.aspectRatio,imgData.dynamicImageUrl,screen.width)[0]}></img>
         </div>
     );
 }
