@@ -5,11 +5,20 @@ import Banner from './Banner/Banner';
 import CreativeCard from './CreativeCard/CreativeCard';
 import Omu from './Omu/Omu';
 import Pmu from './Pmu/Pmu'
+import Recent from './Recent/Recent';
 class Home extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            slots:{}
+            slots:[],
+            widgets:{
+              'SEARCH': Search,
+              'BANNER':Banner,
+              'CREATIVE_CARD':CreativeCard,
+              'OMU':Omu,
+              'PMU_V3':Pmu,
+              'RECENTLY_VIEWED_V2':Recent
+            }
         }
     }
     componentDidMount(){
@@ -23,16 +32,19 @@ class Home extends React.Component {
           console.error("Error: " + error)
         });
       }
+    
     render() { 
         console.log(this.state.slots);
-        if(this.state.slots.length === 0)return(null);
+        let slots = this.state.slots;
+        if(slots.length === 0)return(null);
         return(
             <>
-            <Search widgetData={this.state.slots[0]}/>
-            <Banner widgetData={this.state.slots[1]}/>
-            <CreativeCard widgetData={this.state.slots[2]}/>
-            <Omu widgetData={this.state.slots[3]}/>
-            <Pmu widgetData={this.state.slots[4]}/>
+            {
+              this.state.slots.map((slot, i) => {
+                let WidgetName = this.state.widgets[slot.widget.type];
+                return <WidgetName key={i} widgetData ={slot}/>
+                })
+            }
             </>
         ); 
     }
