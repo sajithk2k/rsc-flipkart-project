@@ -37,9 +37,8 @@ export default function Product() {
     return (
         <>   
             {slots.map((slot, i)=>{
-                console.log(slot.widget.type)
+                // console.log(slot.widget.type)
                 const WidgetName=widgets[slot.widget.type]
-                console.log(WidgetName)
                 return (
                     <>
                         {i!==5 && <WidgetName key={i} slot={slot} priceDetails={priceDetails}/>}

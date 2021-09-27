@@ -9,14 +9,14 @@ export default function ProductDetails({ slot }) {
 
     useEffect(() => {
         if (slot){
-            console.log(getSpecs())
+            // console.log(getSpecs())
             setData({
                 specs: getSpecs(),
                 detailsTitle: getDetailsTitle()
             })
         }
     }, [slot])
-    useEffect(() => console.log({data}), [data])
+    // useEffect(() => console.log({data}), [data])
     return (
         // Product Details and All details from json??
         <>

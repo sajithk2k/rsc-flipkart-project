@@ -36,9 +36,9 @@ export default function Slider(props) {
     scrollToCurrent();
   }, [current])
 
-  useEffect(()=>{
-    console.log(props.slides)
-  }, [props.slides])
+  // useEffect(()=>{
+  //   console.log(props.slides)
+  // }, [props.slides])
 
   return (
     <div>
